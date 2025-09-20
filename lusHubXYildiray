@@ -1,0 +1,90 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+
+local Window = Rayfield:CreateWindow({
+   Name = "🌌YildirayxLus Hub",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Lus Hub",
+   LoadingSubtitle = "by Yildiray",
+   ShowText = "Rayfield", -- for mobile users to unhide rayfield, change if you'd like
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   ToggleUIKeybind = "T", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Lus Hub"
+   },
+
+   Discord = {
+      Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "https://discord.gg/jMXq35cW", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "🌌Lus Hub | Key System",
+      Subtitle = "Link in Discord",
+      Note = "Get key for load script (made by Yildiray🌌)", -- Use this to tell the user how to get a key
+      FileName = "examplehubkey", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"https://raw.githubusercontent.com/Yildirayxlus/Lushub/refs/heads/main/Lus%20Key"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local ScriptsTab = Window:CreateTab("🏠Home", 4483362458) -- Title, Image
+local Section = ScriptsTab:CreateSection("Scripts")
+
+local Button = ScriptsTab:CreateButton({
+   Name = "Kurd Hub",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Ninja10908/S4/refs/heads/main/Kurdhub"))()
+end,
+})
+
+local Button = ScriptsTab:CreateButton({
+   Name = "Lennon Hub (Key is ZEROKHUBLEAKLENNON)",
+   Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/8MGkgiRt/raw",true))()
+end,
+})
+
+local Button = ScriptsTab:CreateButton({
+   Name = "Chilli Hub🌶️",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua"))()
+end,
+})
+
+local Button = ScriptsTab:CreateButton({
+   Name = "Moon Script (Keyless))",
+   Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Steal-a-brainrot/refs/heads/main/Steal-a-Brainrot'))()
+end,
+})
+
+local Button = ScriptsTab:CreateButton({
+   Name = "Ronix Hub (Keyless)",
+   Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/8MGkgiRt/raw",true))()
+end,
+})
+
+local ScriptsTab = Window:CreateTab("Discord", 4483362458) -- Title, Image
+local Section = ScriptsTab:CreateSection("Discord:")
+
+
+local Button = ScriptsTab:CreateButton({
+   Name = "Discord",
+   Callback = function()
+setclipboard("https://discord.gg/jMXq35cW")
+toclipboard("https://discord.gg/jMXq35cW")
+end,
+                
+})
