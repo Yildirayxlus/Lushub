@@ -69,10 +69,27 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Steal-a-bra
 end,
 })
 
+local ScriptsTab = Window:CreateTab("🏠The Strongest Battlegrounds", 4483362458) -- Title, Image
+local Section = ScriptsTab:CreateSection("Scripts")
+
 local Button = ScriptsTab:CreateButton({
-   Name = "Ronix Hub (Keyless)",
+   Name = "TSB (OP)",
    Callback = function()
-loadstring(game:HttpGet("https://pastefy.app/8MGkgiRt/raw",true))()
+loadstring(game:HttpGet("https://raw.githubusercortent.com/BaconBossScript/TSB/main/TSB"))()
+end,
+})
+
+local Button = ScriptsTab:CreateButton({
+   Name = "Arc (OP)",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Mikasuru/Arc/refs/heads/main/Arc.lua"))()
+end,
+})
+
+local Button = ScriptsTab:CreateButton({
+   Name = "Ded (Normal)",
+   Callback = function()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/Noro-ded/add5f50deb5351b84a58f9e26784d421/raw/f4fe60235768436d96a1bd61802ae79eebcab3ce/mainguitsb", true))()
 end,
 })
 
